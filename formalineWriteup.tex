@@ -1,0 +1,15 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper,top=1in, bottom=1.0in, left=1in,
+right=1in]{geometry}
+
+\begin{document}
+
+\begin{center}
+\textbf{Formaline} 
+\end{center}
+
+We introduce formaline, a computational tool for code provenance and reproducibility. Formaline stores the source code of a (scientific) application code as part of the executable. Upon execution, a compressed tar archive (``tarball'') containing the source code is written to the output directory. During compiliation, a tarball of the source code is generated. Formaline then generates a C routine, storing the tarball as a string in the routine. This C routine (and thus the contents of the source tarball) is compiled and linked into the executable of the application code. When the executable is run, the C routine is called and writes the C string containing the tarball into a user-defined output directory. With formaline, the version of an application code used to generate a given data set is never lost, as long as the data set is saved. Formaline supplements code version control systems such as git as an additional code provenance measure. It becomes trivial to reproduce runs, regardless of the changes made to the application code since the data was produced. Additionally, formaline makes it easy to recover lost or deleted code. 
+
+
+\end{document}
